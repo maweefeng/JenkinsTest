@@ -3,7 +3,19 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'ruby --version'
+                echo 'build starting'
+            }
+        }
+
+        stage('test') {
+            steps {
+                echo 'test starting'
+            }
+        }
+
+        stage('deploy') {
+            steps {
+                echo 'deploy starting'
             }
         }
     }
