@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'ruby --version‘
+                echo 'ruby --version'
             }
         }
     }
