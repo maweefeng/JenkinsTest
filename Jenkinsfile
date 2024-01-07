@@ -6,7 +6,7 @@ pipeline {
                 echo 'build starting'
 
                 script {
-                    def test = 2 + 2 = 3 ? 'YES' : 'NO'
+                    def test = 2 + 2 > 3 ? 'YES' : 'NO'
                     echo test
                 }
             }
