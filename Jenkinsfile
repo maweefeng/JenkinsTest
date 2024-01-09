@@ -6,6 +6,7 @@ pipeline {
                 echo 'build starting'
                 sh script: 'ls'
                 sh script: 'pwd'
+                error 'this is error'
             }
         }
 
