@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'build starting'
                 sh script: 'ls'
+                sh script: 'pwd'
             }
         }
 
