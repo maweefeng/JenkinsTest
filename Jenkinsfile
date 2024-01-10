@@ -6,7 +6,7 @@ pipeline {
                 echo 'build starting'
                 sh script: 'ls'
                 sh script: 'pwd'
-                echo env
+                echo env.BUILD_NUMBER
             }
         }
 
