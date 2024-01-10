@@ -3,6 +3,10 @@ pipeline {
     environment {
         CC = 'clang'
     }
+
+    tools {
+        maven 'mvn-3.9.6'
+    }
     stages {
         stage('build') {
             steps {
@@ -11,6 +15,7 @@ pipeline {
                 sh script: 'pwd'
                 sh script: 'printenv'
                 echo env.BUILD_NUMBER
+                sh script: 'mvn clean test install'
             }
         }
 
