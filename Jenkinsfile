@@ -15,7 +15,14 @@ pipeline {
                 sh script: 'pwd'
                 sh script: 'printenv'
                 echo env.BUILD_NUMBER
-                sh script: 'mvn clean test install'
+
+
+                script {
+                     configFileProvider(
+        [configFile(fileId: 'maven-settings', variable: 'MAVEN_SETTINGS')]) {
+        sh 'mvn -s $MAVEN_SETTINGS clean package'
+    }
+                }
             }
         }
 
