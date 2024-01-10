@@ -20,7 +20,7 @@ pipeline {
                 script {
                      configFileProvider(
         [configFile(fileId: 'maven-global-settings', variable: 'MAVEN_SETTINGS')]) {
-        sh 'mvn -s $MAVEN_SETTINGS clean package'
+        sh 'mvn -s $MAVEN_SETTINGS clean install'
     }
                 }
             }
