@@ -17,12 +17,12 @@ pipeline {
                 echo env.BUILD_NUMBER
 
 
-                script {
-                     configFileProvider(
-        [configFile(fileId: 'maven-global-settings', variable: 'MAVEN_SETTINGS')]) {
-        sh 'mvn -s $MAVEN_SETTINGS clean install'
-    }
-                }
+    //             script {
+    //                  configFileProvider(
+    //     [configFile(fileId: 'maven-global-settings', variable: 'MAVEN_SETTINGS')]) {
+    //     sh 'mvn -s $MAVEN_SETTINGS clean install'
+    // }
+    //             }
             }
         }
 
